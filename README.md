@@ -44,7 +44,7 @@ Install the base requirements with pip
 
 ## Experiment Scripts
 
-### Multi Goal Gridworld (Section 5, Appendix B.17)
+### Multi Goal Gridworld (Section 5, Appendix B.19)
 
     python run_multigoal.py --method qdfm --K 4 --seed 42 --device cuda --out results_multigoal
 
@@ -67,20 +67,20 @@ Requires mo_gymnasium
     python run_mo_discrete.py --env deep_sea_treasure --method qdfm --seed 42 --device cuda
     python run_mo_discrete.py --env resource_gathering --method cql --seed 42 --device cuda
 
-### Multi Objective Fork (Appendix B.11)
+### Multi Objective Fork (Appendix B.13)
 
     python run_fork.py --seed 42 --device cuda
 
-### CartPole Two Objective (Appendix B.10)
+### CartPole Two Objective (Appendix B.12)
 
     python run_cartpole_mo.py --seed 42 --device cuda
 
-### CTMC Sampler Correctness (Appendix B.9)
+### CTMC Sampler Correctness (Appendix B.11)
 
     python run_ctmc_check.py --env CartPole-v1 --device cpu
     python run_ctmc_check.py --env Acrobot-v1 --device cpu
 
-### Two Agent Matrix Game (Appendix B.14)
+### Two Agent Matrix Game (Appendix B.16)
 
     python run_matrix_game.py --seed 42 --device cuda
 
