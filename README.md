@@ -22,7 +22,7 @@ Install the base requirements with pip
 
     pip install torch numpy matplotlib gymnasium
 
-To install the basic dependencies, run:
+Alternatively, to install the basic dependencies, run:
 
 ```bash
 pip install -r requirements.txt
