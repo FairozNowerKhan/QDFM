@@ -22,6 +22,12 @@ Install the base requirements with pip
 
     pip install torch numpy matplotlib gymnasium
 
+To install the basic dependencies, run:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## File Structure
 
     bench/              Shared networks (MLP, RateNet, DiscreteQ, CategoricalPolicy, VectorQ, QMIX)
