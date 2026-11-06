@@ -1,6 +1,10 @@
-# QDFM Supplementary Code
+# QDFM: Flow Matching for Offline Reinforcement Learning with Discrete Actions
 
-This repository contains the code for reproducing the experiments in the paper.
+Official PyTorch implementation of **Flow Matching for Offline Reinforcement Learning with Discrete Actions**, accepted at **NeurIPS 2026**.
+
+**Paper:** https://arxiv.org/abs/2602.06138
+
+This repository provides Q-weighted Discrete Flow Matching (QDFM) implementations and experiment scripts for discrete-action offline reinforcement learning, including single-objective, multi-objective, and multi-agent settings.
 
 ## Requirements
 
