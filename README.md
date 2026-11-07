@@ -30,17 +30,10 @@ pip install -r requirements.txt
 
 ## File Structure
 
-    bench/              Shared networks (MLP, RateNet, DiscreteQ, CategoricalPolicy, VectorQ, QMIX)
-    algos/              All algorithm implementations
+    bench/              Networks (MLP, RateNet, DiscreteQ, CategoricalPolicy, VectorQ, QMIX)
+    algo/              Algorithm implementation
         qdfm.py         Single objective QDFM
         qdfm_mo.py      Multi objective QDFM with preference conditioning
-        cql.py          Conservative Q Learning
-        cql_mo.py       Multi objective scalarized CQL
-        iql.py          Implicit Q Learning
-        awac.py         Advantage Weighted Actor Critic
-        bcq.py          Batch Constrained Q Learning
-        brac.py         Behavior Regularized Actor Critic
-        greedyq.py      Greedy Q (argmax baseline)
     envs/               Custom environments
         fork_env.py     Multi Objective Fork gridworld
         matrix_game.py  Two agent coordination game
@@ -54,11 +47,7 @@ pip install -r requirements.txt
 
     python run_multigoal.py --method qdfm --K 4 --seed 42 --device cuda --out results_multigoal
 
-Methods available are qdfm cql iql awac bcq brac greedyq.
 K values available are 2 3 4 5.
-Run all 140 combinations (7 methods x 4 K values x 5 seeds) then aggregate
-
-    python aggregate_multigoal.py --dir results_multigoal --fig_dir figures
 
 ### Discretized MuJoCo (Section 5.1)
 
@@ -71,7 +60,7 @@ Tasks available are halfcheetah_medium halfcheetah_expert hopper_medium hopper_e
 Requires mo_gymnasium
 
     python run_mo_discrete.py --env deep_sea_treasure --method qdfm --seed 42 --device cuda
-    python run_mo_discrete.py --env resource_gathering --method cql --seed 42 --device cuda
+    python run_mo_discrete.py --env resource_gathering --method qdfm --seed 42 --device cuda
 
 ### Multi Objective Fork (Appendix B.13)
 
@@ -92,9 +81,9 @@ Requires mo_gymnasium
 
 ### SMAC Multi Agent (Section 5.3)
 
-Requires smac and StarCraft II installation. Provide a preprocessed data file in numpy format
+Requires smac and StarCraft II installation.
 
-    python run_smac.py --map 2s3z --method cql --seed 42 --data_path data/smac_2s3z.npy --device cuda
+    python run_smac.py --map 2s3z --method qdfm --seed 42 --data_path data/smac_2s3z.npy --device cuda
 
 ## Seeds
 
